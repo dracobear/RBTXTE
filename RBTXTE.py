@@ -1,9 +1,8 @@
 from colorama import Fore
-import os
-version = "v0.02 (monogatari)"
+version = "v0.03 (heros end)"
 print("RBTXTE "+version)
 print("allways remember to end your filenames in .txt!")
-helpmessage = "new (filename). makes a new file \nopen (filename) reads a file, \nedit (filename) edits a file \nrename (filename) renames a file \nhelp shows this message \nexit quits the program"
+helpmessage = "new (filename). makes a new file \nopen (filename) reads a file, \nedit (filename) edits a file \nhelp shows this message \nexit quits the program"
 print(helpmessage)
 while True:
     put = input("what do you want to do? ")
@@ -40,18 +39,9 @@ while True:
             print(Fore.RED + aput + ": Error, file allready exsists" + Fore.WHITE)
         except PermissionError:
             print(Fore.RED + aput + ": Error, access denied" + Fore.WHITE)
-    elif put.startswith("rename ") == True:
-        aput = put.replace("rename ", "")
-        try:
-            newname = input("new file name? ")
-            os.rename(aput, newname)
-        except FileNotFoundError:
-            print(Fore.RED + aput + ": Error, file not found" + Fore.WHITE)
-        except PermissionError:
-            print(Fore.RED + aput + ": Error, access denied" + Fore.WHITE)
-        except  FileExistsError:
-            print(Fore.RED + aput + ": Error, filename taken" + Fore.WHITE)
     elif put == "help":
         print(helpmessage)
     elif put == "exit":
         exit()
+    else:
+        print("that is not an option supported by the editor")
