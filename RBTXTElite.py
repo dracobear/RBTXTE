@@ -17,4 +17,9 @@ while True:
       filena = input('> ')
       print("input text for file")
       filetx = input('> ')
-      open(filena, 'a').write.filetx
+      try:
+         open(filena, 'a').write.filetx
+      except FileNotFoundError:
+         print("file not found")
+      except PermissionError:
+         print("access denied")
