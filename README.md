@@ -1,9 +1,8 @@
 # RBTXTE
 a really bad .txt editor  
-written in python  
-if you want a more general version with the ability to make files in different folders, use TSLFM by @m4r1naaaa  
+written in python    
 ## version 0.01 
-named doukutsu, is a rewrite of my original project inspired by my work in TSLFM  
+named doukutsu, is a rewrite of my original project 
 ## version 0.02
 named monogatari, added renaming, however it allso created an issue
 ## version 0.03
